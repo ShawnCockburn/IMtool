@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>IMTool</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="node_modules/xel/themes/macos.css">
+    <script src="node_modules/xel/xel.min.js"></script>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 1;
+            height: 100%;
+        }
+
+        .sidebar {
+            grid-column: 1;
+            grid-row: 1;
+            background-color: #f8f8fa;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .main {
+            grid-column: 2;
+            grid-row: 1;
+
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>IMtool</h1>
+
+    <div class="wrapper">
+        <div class="sidebar"></div>
+        <div class="main"></div>
+    </div>
+
 </body>
+
 </html>
